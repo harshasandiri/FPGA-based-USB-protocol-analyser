@@ -1,0 +1,2 @@
+vhdl isim_temp "EOP_check_shift_reg.vhd"
+vhdl isim_temp "DPLL.vhd"

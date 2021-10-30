@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/ISE_Projects/data_recovery_v7/testbench_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="numeric_std" />
+            <top_module name="pck_crc16_d1" />
+            <top_module name="pck_crc5_d1" />
+            <top_module name="std_logic_1164" />
+            <top_module name="std_logic_textio" />
+            <top_module name="testbench" />
+            <top_module name="textio" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="36" />
+   <wvobject fp_name="/testbench/clk48mhz" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk48mhz</obj_property>
+      <obj_property name="ObjectShortName">clk48mhz</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/clk12mhz" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk12mhz</obj_property>
+      <obj_property name="ObjectShortName">clk12mhz</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/pid_byte_recovered" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">pid_byte_recovered[7:0]</obj_property>
+      <obj_property name="ObjectShortName">pid_byte_recovered[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/data_byte_recovered" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">data_byte_recovered[7:0]</obj_property>
+      <obj_property name="ObjectShortName">data_byte_recovered[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/reset" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/d_p" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">d_p</obj_property>
+      <obj_property name="ObjectShortName">d_p</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/d_m" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">d_m</obj_property>
+      <obj_property name="ObjectShortName">d_m</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/usb_data" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">usb_data</obj_property>
+      <obj_property name="ObjectShortName">usb_data</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/complete" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">complete</obj_property>
+      <obj_property name="ObjectShortName">complete</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/lfsr" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">lfsr[7:0]</obj_property>
+      <obj_property name="ObjectShortName">lfsr[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/dut/eop_pin" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">eop_pin</obj_property>
+      <obj_property name="ObjectShortName">eop_pin</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/dut/Inst_data_analyser/crc16" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">crc16[15:0]</obj_property>
+      <obj_property name="ObjectShortName">crc16[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/dut/Inst_data_analyser/crc5" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">crc5[4:0]</obj_property>
+      <obj_property name="ObjectShortName">crc5[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/dut/Inst_data_analyser/Inst_counter/cout" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">cout</obj_property>
+      <obj_property name="ObjectShortName">cout</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/clk_recovered" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk_recovered</obj_property>
+      <obj_property name="ObjectShortName">clk_recovered</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/data_recovered" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">data_recovered</obj_property>
+      <obj_property name="ObjectShortName">data_recovered</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/dut/Inst_data_analyser/counter_val" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">counter_val</obj_property>
+      <obj_property name="ObjectShortName">counter_val</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/dut/Inst_data_analyser/counter_enable" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">counter_enable</obj_property>
+      <obj_property name="ObjectShortName">counter_enable</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/eop_pin" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">eop_pin</obj_property>
+      <obj_property name="ObjectShortName">eop_pin</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/dut/Inst_data_analyser/next_state" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">next_state</obj_property>
+      <obj_property name="ObjectShortName">next_state</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/dut/Inst_data_analyser/current_state" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">current_state</obj_property>
+      <obj_property name="ObjectShortName">current_state</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/dut/Inst_data_analyser/enable_shift_reg" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">enable_shift_reg</obj_property>
+      <obj_property name="ObjectShortName">enable_shift_reg</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/dut/Inst_data_analyser/sync_detect" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">sync_detect</obj_property>
+      <obj_property name="ObjectShortName">sync_detect</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/dut/Inst_data_analyser/token_detect" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">token_detect</obj_property>
+      <obj_property name="ObjectShortName">token_detect</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/dut/Inst_data_analyser/data_detect" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">data_detect</obj_property>
+      <obj_property name="ObjectShortName">data_detect</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/dut/Inst_data_analyser/handshake_detect" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">handshake_detect</obj_property>
+      <obj_property name="ObjectShortName">handshake_detect</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/dut/Inst_data_analyser/token_type" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">token_type</obj_property>
+      <obj_property name="ObjectShortName">token_type</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/dut/Inst_data_analyser/data_packet_type" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">data_packet_type</obj_property>
+      <obj_property name="ObjectShortName">data_packet_type</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/dut/Inst_data_analyser/handshake_type" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">handshake_type</obj_property>
+      <obj_property name="ObjectShortName">handshake_type</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/dut/Inst_data_analyser/pid_recovered" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">pid_recovered[7:0]</obj_property>
+      <obj_property name="ObjectShortName">pid_recovered[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/dut/Inst_data_analyser/data_byte" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">data_byte[7:0]</obj_property>
+      <obj_property name="ObjectShortName">data_byte[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/print_byte" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">print_byte</obj_property>
+      <obj_property name="ObjectShortName">print_byte</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/dut/Inst_data_analyser/token_out_buffer" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">token_out_buffer[7:0]</obj_property>
+      <obj_property name="ObjectShortName">token_out_buffer[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/dut/Inst_data_analyser/byte_buffer" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">byte_buffer[7:0]</obj_property>
+      <obj_property name="ObjectShortName">byte_buffer[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/clk12mhz_period" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">clk12mhz_period</obj_property>
+      <obj_property name="ObjectShortName">clk12mhz_period</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/clk48mhz_period" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">clk48mhz_period</obj_property>
+      <obj_property name="ObjectShortName">clk48mhz_period</obj_property>
+   </wvobject>
+</wave_config>

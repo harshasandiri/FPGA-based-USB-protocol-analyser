@@ -1,0 +1,8 @@
+vhdl isim_temp "var_shift_reg.vhd"
+vhdl isim_temp "PCK_CRC5_D1.vhd"
+vhdl isim_temp "PCK_CRC16_D1.vhd"
+vhdl isim_temp "counter.vhd"
+vhdl isim_temp "EOP_check_shift_reg.vhd"
+vhdl isim_temp "data_analyser.vhd"
+vhdl isim_temp "DPLL.vhd"
+vhdl isim_temp "testbench.vhd"

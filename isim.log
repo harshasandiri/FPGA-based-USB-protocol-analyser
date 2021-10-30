@@ -1,0 +1,31 @@
+ISim log file
+Running: C:\ISE_Projects\data_recovery_v8\testbench_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/ISE_Projects/data_recovery_v8/testbench_isim_beh.wdb 
+ISim P.20131013 (signature 0x7708f090)
+This is a Full version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+Token pkt tx => 01010100111000010000111000111110
+PID recovered => 11100001
+PID type identified => OUT
+Data pkt tx => 0101010011000011110111110111111111000011
+PID recovered => 11000011
+PID type identified => DATA0
+data byte recovered => 11011111
+# restart
+# run all
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+Token pkt tx => 01010100111000010000111000111110
+PID recovered => 11100001
+PID type identified => OUT
+Data pkt tx => 0101010011000011110111110111111111000011
+PID recovered => 11000011
+PID type identified => DATA0
+data byte recovered => 11011111
+Handshake pkt tx => 0101010011010010
+PID recovered => 11010010
+PID type identified => ACK

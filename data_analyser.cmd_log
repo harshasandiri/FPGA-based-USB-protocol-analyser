@@ -1,0 +1,8 @@
+vhdtdtfi -prj data_recovery_v7 -o C:/ISE_Projects/data_recovery_v7/data_analyser.vhi -module data_analyser -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work var_shift_reg.vhd -lib work data_analyser.vhd 
+xst -intstyle ise -ifn "C:/ISE_Projects/data_recovery_v7/data_analyser.xst" -ofn "C:/ISE_Projects/data_recovery_v7/data_analyser.syr" 
+xst -intstyle ise -ifn "C:/ISE_Projects/data_recovery_v7/data_analyser.xst" -ofn "C:/ISE_Projects/data_recovery_v7/data_analyser.syr" 
+xst -intstyle ise -ifn "C:/ISE_Projects/data_recovery_v7/data_analyser.xst" -ofn "C:/ISE_Projects/data_recovery_v7/data_analyser.syr" 
+xst -intstyle ise -ifn "C:/ISE_Projects/data_recovery_v7/data_analyser.xst" -ofn "C:/ISE_Projects/data_recovery_v7/data_analyser.syr" 
+xst -intstyle ise -ifn "C:/ISE_Projects/data_recovery_v7/data_analyser.xst" -ofn "C:/ISE_Projects/data_recovery_v7/data_analyser.syr" 
+xst -intstyle ise -ifn "C:/ISE_Projects/data_recovery_v7/data_analyser.xst" -ofn "C:/ISE_Projects/data_recovery_v7/data_analyser.syr" 
+vhdtdtfi -prj data_recovery_v7 -o C:/ISE_Projects/data_recovery_v7/data_analyser.vhi -module data_analyser -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work var_shift_reg.vhd -lib work data_analyser.vhd 

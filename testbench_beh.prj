@@ -1,0 +1,8 @@
+vhdl work "var_shift_reg.vhd"
+vhdl work "PCK_CRC5_D1.vhd"
+vhdl work "PCK_CRC16_D1.vhd"
+vhdl work "counter.vhd"
+vhdl work "EOP_check_shift_reg.vhd"
+vhdl work "data_analyser.vhd"
+vhdl work "DPLL.vhd"
+vhdl work "testbench.vhd"

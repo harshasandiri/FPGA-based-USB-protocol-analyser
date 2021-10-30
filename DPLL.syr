@@ -1,0 +1,644 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.16 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.16 secs
+ 
+--> Reading design: DPLL.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "DPLL.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "DPLL"
+Output Format                      : NGC
+Target Device                      : xc7a100t-2L-csg324
+
+---- Source Options
+Top Module Name                    : DPLL
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:\ISE_Projects\data_recovery_v8\var_shift_reg.vhd" into library work
+Parsing entity <var_shift_reg>.
+Parsing architecture <Behavioral> of entity <var_shift_reg>.
+Parsing VHDL file "C:\ISE_Projects\data_recovery_v8\PCK_CRC5_D1.vhd" into library work
+Parsing package <PCK_CRC5_D1>.
+Parsing package body <PCK_CRC5_D1>.
+Parsing VHDL file "C:\ISE_Projects\data_recovery_v8\PCK_CRC16_D1.vhd" into library work
+Parsing package <PCK_CRC16_D1>.
+Parsing package body <PCK_CRC16_D1>.
+Parsing VHDL file "C:\ISE_Projects\data_recovery_v8\counter.vhd" into library work
+Parsing entity <counter>.
+Parsing architecture <Behavioral> of entity <counter>.
+Parsing VHDL file "C:\ISE_Projects\data_recovery_v8\EOP_check_shift_reg.vhd" into library work
+Parsing entity <EOP_check_shift_reg>.
+Parsing architecture <Behavioral> of entity <eop_check_shift_reg>.
+Parsing VHDL file "C:\ISE_Projects\data_recovery_v8\data_analyser.vhd" into library work
+Parsing entity <data_analyser>.
+Parsing architecture <Behavioral> of entity <data_analyser>.
+Parsing VHDL file "C:\ISE_Projects\data_recovery_v8\DPLL.vhd" into library work
+Parsing entity <DPLL>.
+Parsing architecture <Behavioral> of entity <dpll>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <DPLL> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <EOP_check_shift_reg> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <data_analyser> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <var_shift_reg> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <counter> (architecture <Behavioral>) from library <work>.
+WARNING:HDLCompiler:1127 - "C:\ISE_Projects\data_recovery_v8\data_analyser.vhd" Line 173: Assignment to token_out_buffer ignored, since the identifier is never used
+INFO:HDLCompiler:679 - "C:\ISE_Projects\data_recovery_v8\DPLL.vhd" Line 176. Case statement is complete. others clause is never selected
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <DPLL>.
+    Related source file is "C:\ISE_Projects\data_recovery_v8\DPLL.vhd".
+    Found 4-bit register for signal <current_state>.
+    Found 1-bit register for signal <data_recovered>.
+    Found 1-bit register for signal <b>.
+    Found 1-bit register for signal <a>.
+    Found finite state machine <FSM_0> for signal <current_state>.
+    -----------------------------------------------------------------------
+    | States             | 12                                             |
+    | Transitions        | 32                                             |
+    | Inputs             | 3                                              |
+    | Outputs            | 1                                              |
+    | Clock              | clk48MHz (rising_edge)                         |
+    | Reset              | reset (positive)                               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | s_c                                            |
+    | Power Up State     | s_c                                            |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Summary:
+	inferred   3 D-type flip-flop(s).
+	inferred   1 Finite State Machine(s).
+Unit <DPLL> synthesized.
+
+Synthesizing Unit <EOP_check_shift_reg>.
+    Related source file is "C:\ISE_Projects\data_recovery_v8\EOP_check_shift_reg.vhd".
+    Found 6-bit register for signal <shift_reg>.
+    Summary:
+	inferred   6 D-type flip-flop(s).
+Unit <EOP_check_shift_reg> synthesized.
+
+Synthesizing Unit <data_analyser>.
+    Related source file is "C:\ISE_Projects\data_recovery_v8\data_analyser.vhd".
+    Found 3-bit register for signal <current_state>.
+    Found 32-bit register for signal <one_bit_counter>.
+INFO:Xst:1799 - State crc5_state is never reached in FSM <current_state>.
+INFO:Xst:1799 - State crc16_state is never reached in FSM <current_state>.
+INFO:Xst:1799 - State eop_state is never reached in FSM <current_state>.
+    Found finite state machine <FSM_1> for signal <current_state>.
+    -----------------------------------------------------------------------
+    | States             | 8                                              |
+    | Transitions        | 15                                             |
+    | Inputs             | 6                                              |
+    | Outputs            | 4                                              |
+    | Clock              | clk_recovered (rising_edge)                    |
+    | Reset              | reset (positive)                               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | idle                                           |
+    | Power Up State     | idle                                           |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 32-bit adder for signal <one_bit_counter[31]_GND_8_o_add_32_OUT> created at line 166.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  32 D-type flip-flop(s).
+	inferred  14 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <data_analyser> synthesized.
+
+Synthesizing Unit <var_shift_reg>.
+    Related source file is "C:\ISE_Projects\data_recovery_v8\var_shift_reg.vhd".
+        n = 8
+    Found 8-bit register for signal <shift_reg>.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+Unit <var_shift_reg> synthesized.
+
+Synthesizing Unit <counter>.
+    Related source file is "C:\ISE_Projects\data_recovery_v8\counter.vhd".
+    Found 8-bit register for signal <counter>.
+    Found 8-bit adder for signal <counter[7]_GND_11_o_add_0_OUT> created at line 29.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   8 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <counter> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 2
+ 32-bit adder                                          : 1
+ 8-bit adder                                           : 1
+# Registers                                            : 7
+ 1-bit register                                        : 3
+ 32-bit register                                       : 1
+ 6-bit register                                        : 1
+ 8-bit register                                        : 2
+# Multiplexers                                         : 15
+ 1-bit 2-to-1 multiplexer                              : 9
+ 32-bit 2-to-1 multiplexer                             : 2
+ 8-bit 2-to-1 multiplexer                              : 4
+# FSMs                                                 : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <counter>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+Unit <counter> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 32-bit adder                                          : 1
+# Counters                                             : 1
+ 8-bit up counter                                      : 1
+# Registers                                            : 49
+ Flip-Flops                                            : 49
+# Multiplexers                                         : 14
+ 1-bit 2-to-1 multiplexer                              : 9
+ 32-bit 2-to-1 multiplexer                             : 2
+ 8-bit 2-to-1 multiplexer                              : 3
+# FSMs                                                 : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_0> on signal <current_state[1:4]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ s_c   | 0000
+ s_d   | 0001
+ s_b   | 0010
+ s_f   | 0011
+ s_0   | 0100
+ s_1   | 0101
+ s_2   | 0110
+ s_3   | 0111
+ s_4   | 1000
+ s_5   | 1001
+ s_6   | 1010
+ s_7   | 1011
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <Inst_data_analyser/FSM_1> on signal <current_state[1:3]> with user encoding.
+-----------------------------
+ State           | Encoding
+-----------------------------
+ idle            | 000
+ pid_state       | 001
+ data_state      | 010
+ token_state     | 011
+ handshake_state | 100
+ crc5_state      | unreached
+ crc16_state     | unreached
+ eop_state       | unreached
+-----------------------------
+
+Optimizing unit <var_shift_reg> ...
+
+Optimizing unit <DPLL> ...
+
+Optimizing unit <data_analyser> ...
+WARNING:Xst:1293 - FF/Latch <Inst_data_analyser/one_bit_counter_19> has a constant value of 0 in block <DPLL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_data_analyser/one_bit_counter_18> has a constant value of 0 in block <DPLL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_data_analyser/one_bit_counter_17> has a constant value of 0 in block <DPLL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_data_analyser/one_bit_counter_16> has a constant value of 0 in block <DPLL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_data_analyser/one_bit_counter_15> has a constant value of 0 in block <DPLL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_data_analyser/one_bit_counter_14> has a constant value of 0 in block <DPLL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_data_analyser/one_bit_counter_13> has a constant value of 0 in block <DPLL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_data_analyser/one_bit_counter_12> has a constant value of 0 in block <DPLL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_data_analyser/one_bit_counter_11> has a constant value of 0 in block <DPLL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_data_analyser/one_bit_counter_10> has a constant value of 0 in block <DPLL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_data_analyser/one_bit_counter_9> has a constant value of 0 in block <DPLL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_data_analyser/one_bit_counter_8> has a constant value of 0 in block <DPLL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_data_analyser/one_bit_counter_7> has a constant value of 0 in block <DPLL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_data_analyser/one_bit_counter_6> has a constant value of 0 in block <DPLL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_data_analyser/one_bit_counter_5> has a constant value of 0 in block <DPLL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_data_analyser/one_bit_counter_4> has a constant value of 0 in block <DPLL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_data_analyser/one_bit_counter_3> has a constant value of 0 in block <DPLL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_data_analyser/Inst_counter/counter_7> has a constant value of 0 in block <DPLL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_data_analyser/Inst_counter/counter_6> has a constant value of 0 in block <DPLL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_data_analyser/Inst_counter/counter_5> has a constant value of 0 in block <DPLL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_data_analyser/Inst_counter/counter_4> has a constant value of 0 in block <DPLL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_data_analyser/Inst_counter/counter_3> has a constant value of 0 in block <DPLL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_data_analyser/one_bit_counter_31> has a constant value of 0 in block <DPLL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_data_analyser/one_bit_counter_30> has a constant value of 0 in block <DPLL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_data_analyser/one_bit_counter_29> has a constant value of 0 in block <DPLL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_data_analyser/one_bit_counter_28> has a constant value of 0 in block <DPLL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_data_analyser/one_bit_counter_27> has a constant value of 0 in block <DPLL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_data_analyser/one_bit_counter_26> has a constant value of 0 in block <DPLL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_data_analyser/one_bit_counter_25> has a constant value of 0 in block <DPLL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_data_analyser/one_bit_counter_24> has a constant value of 0 in block <DPLL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_data_analyser/one_bit_counter_23> has a constant value of 0 in block <DPLL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_data_analyser/one_bit_counter_22> has a constant value of 0 in block <DPLL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_data_analyser/one_bit_counter_21> has a constant value of 0 in block <DPLL>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <Inst_data_analyser/one_bit_counter_20> has a constant value of 0 in block <DPLL>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block DPLL, actual ratio is 0.
+FlipFlop internal_data_recovered has been replicated 1 time(s) to handle iob=true attribute.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 31
+ Flip-Flops                                            : 31
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : DPLL.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 69
+#      GND                         : 1
+#      INV                         : 1
+#      LUT1                        : 2
+#      LUT2                        : 1
+#      LUT3                        : 4
+#      LUT4                        : 7
+#      LUT5                        : 13
+#      LUT6                        : 28
+#      MUXCY                       : 4
+#      MUXF7                       : 1
+#      VCC                         : 1
+#      XORCY                       : 6
+# FlipFlops/Latches                : 31
+#      FD                          : 1
+#      FD_1                        : 1
+#      FDC                         : 15
+#      FDE                         : 8
+#      FDP                         : 6
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 24
+#      IBUF                        : 4
+#      OBUF                        : 20
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a100tcsg324-2l 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              30  out of  126800     0%  
+ Number of Slice LUTs:                   56  out of  63400     0%  
+    Number used as Logic:                56  out of  63400     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     67
+   Number with an unused Flip Flop:      37  out of     67    55%  
+   Number with an unused LUT:            11  out of     67    16%  
+   Number of fully used LUT-FF pairs:    19  out of     67    28%  
+   Number of unique control sets:         4
+
+IO Utilization: 
+ Number of IOs:                          25
+ Number of bonded IOBs:                  25  out of    210    11%  
+    IOB Flip Flops/Latches:               1
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)        | Load  |
+-----------------------------------+------------------------------+-------+
+clk48MHz                           | BUFGP                        | 12    |
+current_state_FSM_FFd3             | NONE(internal_data_recovered)| 19    |
+-----------------------------------+------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 2.617ns (Maximum Frequency: 382.058MHz)
+   Minimum input arrival time before clock: 0.848ns
+   Maximum output required time after clock: 3.337ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk48MHz'
+  Clock period: 2.266ns (frequency: 441.287MHz)
+  Total number of paths / destination ports: 66 / 9
+-------------------------------------------------------------------------
+Delay:               1.133ns (Levels of Logic = 1)
+  Source:            b (FF)
+  Destination:       current_state_FSM_FFd4 (FF)
+  Source Clock:      clk48MHz falling
+  Destination Clock: clk48MHz rising
+
+  Data Path: b to current_state_FSM_FFd4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD_1:C->Q             3   0.402   0.611  b (b)
+     LUT4:I1->O            1   0.105   0.000  current_state_FSM_FFd1-In2 (current_state_FSM_FFd1-In)
+     FDC:D                     0.015          current_state_FSM_FFd1
+    ----------------------------------------
+    Total                      1.133ns (0.522ns logic, 0.611ns route)
+                                       (46.1% logic, 53.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'current_state_FSM_FFd3'
+  Clock period: 2.617ns (frequency: 382.058MHz)
+  Total number of paths / destination ports: 232 / 25
+-------------------------------------------------------------------------
+Delay:               2.617ns (Levels of Logic = 4)
+  Source:            Inst_data_analyser/Inst_var_shift_reg/shift_reg_2 (FF)
+  Destination:       Inst_data_analyser/current_state_FSM_FFd3 (FF)
+  Source Clock:      current_state_FSM_FFd3 rising
+  Destination Clock: current_state_FSM_FFd3 rising
+
+  Data Path: Inst_data_analyser/Inst_var_shift_reg/shift_reg_2 to Inst_data_analyser/current_state_FSM_FFd3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              8   0.398   0.832  Inst_data_analyser/Inst_var_shift_reg/shift_reg_2 (Inst_data_analyser/Inst_var_shift_reg/shift_reg_2)
+     LUT6:I0->O            3   0.105   0.369  Inst_data_analyser/PID_recovered_sig<8>111 (Inst_data_analyser/PID_recovered_sig<8>11)
+     LUT6:I5->O            5   0.105   0.380  Inst_data_analyser/PID_recovered_sig<3>1 (PID_byte_recovered_5_OBUF)
+     LUT6:I5->O            1   0.105   0.000  Inst_data_analyser/current_state_FSM_FFd3-In3_G (N25)
+     MUXF7:I1->O           1   0.308   0.000  Inst_data_analyser/current_state_FSM_FFd3-In3 (Inst_data_analyser/current_state_FSM_FFd3-In)
+     FDC:D                     0.015          Inst_data_analyser/current_state_FSM_FFd3
+    ----------------------------------------
+    Total                      2.617ns (1.036ns logic, 1.581ns route)
+                                       (39.6% logic, 60.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk48MHz'
+  Total number of paths / destination ports: 14 / 13
+-------------------------------------------------------------------------
+Offset:              0.848ns (Levels of Logic = 1)
+  Source:            reset (PAD)
+  Destination:       six_bit_EOP_shift_reg/shift_reg_5 (FF)
+  Destination Clock: clk48MHz rising
+
+  Data Path: reset to six_bit_EOP_shift_reg/shift_reg_5
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            21   0.001   0.450  reset_IBUF (reset_IBUF)
+     FDP:PRE                   0.397          six_bit_EOP_shift_reg/shift_reg_0
+    ----------------------------------------
+    Total                      0.848ns (0.398ns logic, 0.450ns route)
+                                       (47.0% logic, 53.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'current_state_FSM_FFd3'
+  Total number of paths / destination ports: 13 / 13
+-------------------------------------------------------------------------
+Offset:              0.848ns (Levels of Logic = 1)
+  Source:            reset (PAD)
+  Destination:       internal_data_recovered (FF)
+  Destination Clock: current_state_FSM_FFd3 rising
+
+  Data Path: reset to internal_data_recovered
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            21   0.001   0.450  reset_IBUF (reset_IBUF)
+     FDC:CLR                   0.397          internal_data_recovered
+    ----------------------------------------
+    Total                      0.848ns (0.398ns logic, 0.450ns route)
+                                       (47.0% logic, 53.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'current_state_FSM_FFd3'
+  Total number of paths / destination ports: 203 / 18
+-------------------------------------------------------------------------
+Offset:              3.337ns (Levels of Logic = 4)
+  Source:            Inst_data_analyser/Inst_var_shift_reg/shift_reg_2 (FF)
+  Destination:       PID_byte_recovered<3> (PAD)
+  Source Clock:      current_state_FSM_FFd3 rising
+
+  Data Path: Inst_data_analyser/Inst_var_shift_reg/shift_reg_2 to PID_byte_recovered<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              8   0.398   0.832  Inst_data_analyser/Inst_var_shift_reg/shift_reg_2 (Inst_data_analyser/Inst_var_shift_reg/shift_reg_2)
+     LUT6:I0->O            5   0.105   0.672  Inst_data_analyser/GND_8_o_byte_buffer[7]_equal_11_o<7>21 (Inst_data_analyser/GND_8_o_byte_buffer[7]_equal_11_o<7>2)
+     LUT4:I0->O            1   0.105   0.780  Inst_data_analyser/PID_recovered_sig<5>_SW0 (N6)
+     LUT6:I1->O            1   0.105   0.339  Inst_data_analyser/PID_recovered_sig<5> (PID_byte_recovered_3_OBUF)
+     OBUF:I->O                 0.000          PID_byte_recovered_3_OBUF (PID_byte_recovered<3>)
+    ----------------------------------------
+    Total                      3.337ns (0.713ns logic, 2.624ns route)
+                                       (21.4% logic, 78.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk48MHz'
+  Total number of paths / destination ports: 61 / 11
+-------------------------------------------------------------------------
+Offset:              2.636ns (Levels of Logic = 3)
+  Source:            six_bit_EOP_shift_reg/shift_reg_5 (FF)
+  Destination:       data_byte_recovered<7> (PAD)
+  Source Clock:      clk48MHz rising
+
+  Data Path: six_bit_EOP_shift_reg/shift_reg_5 to data_byte_recovered<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDP:C->Q              2   0.398   0.798  six_bit_EOP_shift_reg/shift_reg_5 (six_bit_EOP_shift_reg/shift_reg_5)
+     LUT6:I0->O           21   0.105   0.891  EOP_found<5>1 (EOP_pin_OBUF)
+     LUT6:I1->O            1   0.105   0.339  Inst_data_analyser/Mmux_byte_out_buffer11 (data_byte_recovered_0_OBUF)
+     OBUF:I->O                 0.000          data_byte_recovered_0_OBUF (data_byte_recovered<0>)
+    ----------------------------------------
+    Total                      2.636ns (0.608ns logic, 2.028ns route)
+                                       (23.1% logic, 76.9% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk48MHz
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk48MHz       |    2.181|    1.133|         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock current_state_FSM_FFd3
+----------------------+---------+---------+---------+---------+
+                      | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------+---------+---------+---------+---------+
+clk48MHz              |    3.159|         |         |         |
+current_state_FSM_FFd3|    2.617|         |         |         |
+----------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 10.00 secs
+Total CPU time to Xst completion: 9.90 secs
+ 
+--> 
+
+Total memory usage is 4625012 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   35 (   0 filtered)
+Number of infos    :    4 (   0 filtered)
+
