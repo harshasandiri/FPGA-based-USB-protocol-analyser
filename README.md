@@ -1,5 +1,5 @@
 # FPGA based USB protocol analyser
-==================================
+=========================================
 
 - Development of a system which can capture and analyze transmitted data on a USB wire.
 
